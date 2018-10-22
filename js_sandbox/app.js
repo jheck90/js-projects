@@ -1,77 +1,41 @@
-const id = 100;
+const color = 'yellow';
 
-// // EQUAL TO
-// if(id == 100){
-//     console.log('CORRECT');
-// } else {
-//         console.log('INCORRECT');
-// }
-
-// // NOT EQUAL TO
-// if(id != 101){
-//     console.log('CORRECT');
-// } else {
-//         console.log('INCORRECT');
-// }
-
-// // EQUAL TO VALUE AND TYPE
-// if(id === 100){
-//     console.log('CORRECT');
-// } else {
-//         console.log('INCORRECT');
-// }
-
-// // EQUAL TO VALUE AND TYPE
-// if(id !== 100){
-//     console.log('CORRECT');
-// } else {
-//         console.log('INCORRECT');
-// }
-
-// Test if undefined
-// if(typeof id !== 'undefined'){
-//     // gotta use back ticks to do this line below
-//     console.log(`The ID is ${id}`);
-// } else {
-//     console.log('NO ID');
-// }
-
-// IF ELSE
-// const color = 'yellow';
-
-// if(color === 'red'){
-//     console.log('color is red');
-// } else if(color === 'blue'){
-//     console.log('colow is blue');
-// } else {
-//     console.log('Color is not red or blue');
-// }
-
-// LOGICAL OPERATORS
-const name = 'Steve';
-const age = 4;
-
-// AND &&
-if(age > 0 && age < 12){
-    console.log(`${name} is a child`);
-} else if(age >= 13 && age <= 19){
-    console.log(`${name} is a teenager`);
-} else {
-    console.log(`${name} is an adult`);
+switch(color){
+    case 'red' :
+        console.log('Red');
+        break;
+    case 'blue' :
+        console.log('Blue');
+        break;
+    default:
+        console.log('Color is not red or blue')
+        break;
 }
 
-// OR ||
-if(age < 16 || age > 65){
-    console.log(`${name} can not run in race`)
-} else {
-    console.log(`${name} is registered for race`)
+let day;
+
+switch(new Date().getDay()){
+    case 0:
+        day = 'Sunday';
+        break;
+    case 1:
+        day = 'Monday';
+        break;
+    case 2:
+        day = 'Tuesday';
+        break;
+    case 3:
+        day = 'Wed';
+        break;
+    case 4:
+        day = 'Thurs';
+        break;
+    case 5:
+        day = 'Fri';
+        break;
+    case 6:
+        day = 'Sat';
+        break;
 }
 
-// TERNARY OPERATOR
-console.log(id === 100 ? 'Correct' : 'INCORRECT');
-
-// WITHOUT BRACES
-if(id === 100)
-    console.log('CORRECT');
-else
-    console.log('INCORRECT');
+console.log(`Today is ${day}`)
