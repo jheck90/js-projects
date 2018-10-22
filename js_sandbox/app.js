@@ -1,41 +1,26 @@
-const person = {
-    firstName: 'Steve',
-    lastName: 'Smith',
-    age: 30,
-    email: 'steve@aol.com',
-    hobbies: ['music', 'sports'],
-    address: {
-        city: 'Miami',
-        state: 'Florida'
-    },
-    getBirthYear: function(){
-        // since we're an object within object, we have to use 'this'
-        return 2018 - this.age;
-    }
-}
-
 let val;
 
-val = person;
-// Get Specific value
-val = person.firstName;
-val = person['firstName'];
-val = person.age;
-val = person.hobbies;
-val = person.address.state;
-val = person.address['city'];
-val = person.getBirthYear();
+const today = new Date();
+let birthday = new Date('9/10/1981 11:25:00');
+birthday = new Date('September 10 1981');
+birthday = new Date('9/10/1981');
 
 
-console.log(val);
+// Months are 0 based, so Nov shows as '9'
+val = today.getMonth();
+val = today.getDate();
+// 0 based, starting on sunday as 0
+val = today.getDay();
+val = today.getFullYear();
+val = today.getHours();
+val = today.getMinutes();
+val = today.getSeconds();
+val = today.getMilliseconds();
+val = today.getTime();
 
-// array of objects
-const people = [
-    {name: 'john', age: 30},
-    {name: 'mike', age: 23}
-];
+birthday.setMonth(2);
+birthday.setDate(12);
+birthday.setFullYear(1985);
+birthday.setHours(3);
 
-//a loop to show all people in that array above
-for (let i = 0; i < people.length; i++){
-    console.log(people[i].name);
-}
+console.log(birthday);
