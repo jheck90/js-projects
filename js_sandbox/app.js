@@ -1,41 +1,63 @@
-const color = 'yellow';
+// WINDOW METHODS / OBJECTS / PROPERTIES
 
-switch(color){
-    case 'red' :
-        console.log('Red');
-        break;
-    case 'blue' :
-        console.log('Blue');
-        break;
-    default:
-        console.log('Color is not red or blue')
-        break;
-}
+// Alert
+//alert('Hello World!')
 
-let day;
+// Prompt
+// const input = prompt();
+// alert(input);
 
-switch(new Date().getDay()){
-    case 0:
-        day = 'Sunday';
-        break;
-    case 1:
-        day = 'Monday';
-        break;
-    case 2:
-        day = 'Tuesday';
-        break;
-    case 3:
-        day = 'Wed';
-        break;
-    case 4:
-        day = 'Thurs';
-        break;
-    case 5:
-        day = 'Fri';
-        break;
-    case 6:
-        day = 'Sat';
-        break;
-}
+// Confirm
+// if(confirm('Are you sure?')){
+//     console.log('Yes');
+// } else {
+//     console.log('NO');
+// }
 
-console.log(`Today is ${day}`)
+let val;
+
+// Outer height and width
+val = window.outerHeight;
+val = window.outerWidth;
+
+// Inner height and width (not scroll bars and ish)
+val = window.innerHeight;
+val = window.innerWidth;
+
+// Scroll points (figuring out where you in terms of scrolling)
+val = window.scrollY;
+val = window.scrollX;
+
+// Location Object
+val = window.location;
+val = window.location.hostname;
+val = window.location.port;
+val = window.location.href;
+val = window.location.search;
+
+// Redirect
+// window.location.href = 'http://google.com';
+
+// Reload
+// window.location.reload();
+
+// History Object
+// window.history.go(-5);
+
+// val = window.history.length
+
+// Navigator Object
+val = window.navigator;
+val = window.navigator.appName;
+val = window.navigator.appVersion;
+val = window.navigator.userAgent;
+val = window.navigator.platform;
+val = window.navigator.vendor;
+val = window.navigator.language;
+
+
+
+
+
+console.log(val);
+
