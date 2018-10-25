@@ -1,52 +1,40 @@
-// REPLACE ELEMENT
+//  // addeventlistener needs the action, and a function
+//  document.querySelector('.clear-tasks').addEventListener('click', function(e){
+//      console.log('Hello World');
 
-// Create element
-const newHeading = document.createElement('h2');
-// Add id
-newHeading.id = 'task-title';
-// Create new text node
-newHeading.appendChild(document.createTextNode('task list'));
-
-// get the old heading
-const oldHeading = document.getElementById('task-title');
-// Parent
-const cardAction = document.querySelector('.card-action');
-
-// Replace
-cardAction.replaceChild(newHeading, oldHeading);
+//      // Prevents default link method
+//      //e.preventDefault();
+//  });
 
 
-// REMOVE ELEMENT
-const lis = document.querySelectorAll('li');
-const list = document.querySelector('ul');
+// addeventlistener needs the action, and a function
+document.querySelector('.clear-tasks').addEventListener('click', onClick);
 
-// Remove list item
-lis[0].remove();
+function onClick(e){
+    //console.log('Clicked');
 
-// Remove child element
-list.removeChild(lis[3]);
+    let val;
 
-// CLASSES & ATTRIBUTES
-const firstLi = document.querySelector('li:first-child');
-const link = firstLi.children[0];
+    val = e;
 
-let val;
+    // Event target element
+    val = e.target;
+    val = e.target.id;
+    val = e.target.classList;
 
-// Classes
-val = link.className;
-val = link.classList;
-val = link.classList[0];
-link.classList.add('test');
-link.classList.remove('test');
+    // Event type
+    val = e.type;
 
-val = link;
+    // Timestamp
+    val = e.timeStamp;
 
-// Attributes
-val = link.getAttribute('href');
-val = link.setAttribute('href', 'http://google.com');
-link.setAttribute('title', 'Google');
-val = link.hasAttribute('title');
-link.removeAttribute('title');
-val = link;
+    // Coords event relative t o the window
+    val = e.clientY;
+    val = e.clientX;
 
-console.log(val);
+     // Coords event relative to the element
+     val = e.offsetY;
+     val = e.offsetX;
+
+    console.log(val);
+}
